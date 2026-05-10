@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main, github-actions ]
 
+env:
+  HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
+  HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
